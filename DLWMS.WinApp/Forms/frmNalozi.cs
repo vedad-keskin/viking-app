@@ -1,5 +1,6 @@
 ﻿using DLWMS.Data.Models;
 using DLWMS.Infrastructure;
+using DLWMS.WinApp.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,33 +41,46 @@ namespace DLWMS.WinApp.Forms
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-
-            var radnik = cbRadnik.SelectedItem as Radnik;
-            var vozilo = cbVozilo.SelectedItem as Vozilo;
-            var firma = cbFirma.SelectedItem as Firma;
-            var usluga = cbUsluga.SelectedItem as Usluga;
-
-            var iznos = int.Parse(txtIznos.Text);
-            var kolicina = int.Parse(txtKolicina.Text);
-
-            var noviNalog = new Nalog()
+            if (ValidirajUnosNaloga())
             {
-                RadnikId = radnik.Id,
-                UslugaId = usluga.Id,
-                Kolicina = kolicina,
-                FirmaId = firma.Id,
-                VoziloId = vozilo.Id,
-                Datum = DateTime.Now,
-                Iznos = iznos
 
-            };
+                var radnik = cbRadnik.SelectedItem as Radnik;
+                var vozilo = cbVozilo.SelectedItem as Vozilo;
+                var firma = cbFirma.SelectedItem as Firma;
+                var usluga = cbUsluga.SelectedItem as Usluga;
 
-            db.Nalozi.Add(noviNalog);
-            db.SaveChanges();
+                var iznos = int.Parse(txtIznos.Text);
+                var kolicina = int.Parse(txtKolicina.Text);
 
-            UcitajNaloge();
+                var noviNalog = new Nalog()
+                {
+
+                    RadnikId = radnik.Id,
+                    UslugaId = usluga.Id,
+                    Kolicina = kolicina,
+                    FirmaId = firma.Id,
+                    VoziloId = vozilo.Id,
+                    Datum = DateTime.Now,
+                    Iznos = iznos
+
+                };
+
+                db.Nalozi.Add(noviNalog);
+                db.SaveChanges();
+
+                UcitajNaloge();
+
+            }
 
 
+
+        }
+
+        private bool ValidirajUnosNaloga()
+        {
+            return Validator.ProvjeriJeLiBroj(txtKolicina, err, "Vrijednost mora biti numerička")
+                &&
+                Validator.ProvjeriJeLiBroj(txtIznos, err, "Vrijednost mora biti numerička");
         }
 
         private void UcitajNaloge()

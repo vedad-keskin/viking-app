@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblRadnik = new Label();
             lblUsluga = new Label();
             lblVozilo = new Label();
@@ -49,7 +50,9 @@
             Firma = new DataGridViewTextBoxColumn();
             Datum = new DataGridViewTextBoxColumn();
             Iznos = new DataGridViewTextBoxColumn();
+            err = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)err).BeginInit();
             SuspendLayout();
             // 
             // lblRadnik
@@ -243,6 +246,10 @@
             Iznos.Name = "Iznos";
             Iznos.ReadOnly = true;
             // 
+            // err
+            // 
+            err.ContainerControl = this;
+            // 
             // frmNalozi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -267,6 +274,7 @@
             Text = "Placeholder";
             Load += frmNalozi_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)err).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -294,5 +302,6 @@
         private DataGridViewTextBoxColumn Firma;
         private DataGridViewTextBoxColumn Datum;
         private DataGridViewTextBoxColumn Iznos;
+        private ErrorProvider err;
     }
 }

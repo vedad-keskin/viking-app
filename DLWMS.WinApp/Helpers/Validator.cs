@@ -21,5 +21,28 @@
             err.Clear();
             return true;
         }
+
+        public static bool ProvjeriJeLiBroj(Control control, ErrorProvider err, string poruka)
+        {
+            bool validanUnos = true;
+
+            if (control is TextBox textBox)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text) || !decimal.TryParse(textBox.Text, out _))
+                {
+                    validanUnos = false;
+                }
+            }
+
+            if (!validanUnos)
+            {
+                err.SetError(control, poruka);
+                return false;
+            }
+
+            err.Clear();
+            return true;
+        }
+
     }
 }

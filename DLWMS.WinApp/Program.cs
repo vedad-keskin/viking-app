@@ -13,7 +13,7 @@ namespace DLWMS.WinApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            var startnaForma = new frmLogin();
+            var startnaForma = new frmNalozi(1);
             Application.Run(startnaForma);
         }
     }
