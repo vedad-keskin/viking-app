@@ -18,16 +18,16 @@ namespace DLWMS.Data.Models
         public Vozilo Vozilo { get; set; }
         public int? UslugaId { get; set; }
         public Usluga Usluga { get; set; }
-
         public int Kolicina { get; set; }
-
         public int Iznos { get; set; }
-
         public int? FirmaId { get; set; }
-
         public Firma Firma { get; set; }
-
         public DateTime Datum { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Kolicina}x {Usluga} na vozilu {Vozilo}";
+        }
 
 
     }
