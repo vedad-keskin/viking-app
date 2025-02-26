@@ -197,7 +197,7 @@ namespace DLWMS.WinApp.Forms
 
         private void btnIzvjestaj_Click(object sender, EventArgs e)
         {
-            var noviIzvjestaj = new frmIzvjestaji();
+            var noviIzvjestaj = new frmIzvjestaji(dnevniNalozi,dtpDatumFilter.Value.Date);
 
             noviIzvjestaj.ShowDialog();
         }

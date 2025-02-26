@@ -293,6 +293,8 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             private global::System.Data.DataColumn columnIznos;
             
+            private global::System.Data.DataColumn columnFirma;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public dsDnevniIzvjestajDataTable() {
@@ -384,6 +386,14 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FirmaColumn {
+                get {
+                    return this.columnFirma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRow AdddsDnevniIzvjestajRow(string Rb, string Radnik, string Vozilo, string Usluga, string Kolicina, string Datum, string Iznos) {
+            public dsDnevniIzvjestajRow AdddsDnevniIzvjestajRow(string Rb, string Radnik, string Vozilo, string Usluga, string Kolicina, string Datum, string Iznos, string Firma) {
                 dsDnevniIzvjestajRow rowdsDnevniIzvjestajRow = ((dsDnevniIzvjestajRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Rb,
@@ -428,7 +438,8 @@ namespace DLWMS.WinApp.Izvjestaji {
                         Usluga,
                         Kolicina,
                         Datum,
-                        Iznos};
+                        Iznos,
+                        Firma};
                 rowdsDnevniIzvjestajRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdsDnevniIzvjestajRow);
                 return rowdsDnevniIzvjestajRow;
@@ -458,6 +469,7 @@ namespace DLWMS.WinApp.Izvjestaji {
                 this.columnKolicina = base.Columns["Kolicina"];
                 this.columnDatum = base.Columns["Datum"];
                 this.columnIznos = base.Columns["Iznos"];
+                this.columnFirma = base.Columns["Firma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +489,8 @@ namespace DLWMS.WinApp.Izvjestaji {
                 base.Columns.Add(this.columnDatum);
                 this.columnIznos = new global::System.Data.DataColumn("Iznos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIznos);
+                this.columnFirma = new global::System.Data.DataColumn("Firma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirma);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -731,6 +745,22 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Firma {
+                get {
+                    try {
+                        return ((string)(this[this.tabledsDnevniIzvjestaj.FirmaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Firma\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledsDnevniIzvjestaj.FirmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRbNull() {
                 return this.IsNull(this.tabledsDnevniIzvjestaj.RbColumn);
             }
@@ -811,6 +841,18 @@ namespace DLWMS.WinApp.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIznosNull() {
                 this[this.tabledsDnevniIzvjestaj.IznosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFirmaNull() {
+                return this.IsNull(this.tabledsDnevniIzvjestaj.FirmaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFirmaNull() {
+                this[this.tabledsDnevniIzvjestaj.FirmaColumn] = global::System.Convert.DBNull;
             }
         }
         
