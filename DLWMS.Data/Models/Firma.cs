@@ -12,6 +12,10 @@ namespace DLWMS.Data.Models
         [Key]
         public int Id { get; set; }
         public string Naziv { get; set; } = string.Empty;
+        public string PuniNaziv { get; set; } = string.Empty;
+        public string Adresa { get; set; } = string.Empty;
+        public int IDbr { get; set; }
+        public int PDVbr { get; set; }
 
         public override string ToString()
         {

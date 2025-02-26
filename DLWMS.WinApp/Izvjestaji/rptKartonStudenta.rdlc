@@ -139,8 +139,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox19</rd:DefaultName>
-            <Top>6.03534cm</Top>
-            <Left>0.75353cm</Left>
+            <Top>5.6755cm</Top>
+            <Left>0.39899cm</Left>
             <Height>0.64233cm</Height>
             <Width>15.2cm</Width>
             <ZIndex>1</ZIndex>
@@ -762,7 +762,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsDnevniIzvjestaj</DataSetName>
-            <Top>3.62233cm</Top>
+            <Top>3.2625cm</Top>
             <Left>0.39899cm</Left>
             <Height>1.2cm</Height>
             <Width>19.05637cm</Width>
