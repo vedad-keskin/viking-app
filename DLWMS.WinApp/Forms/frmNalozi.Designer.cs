@@ -353,6 +353,7 @@
             btnIzvjestaj.TabIndex = 9;
             btnIzvjestaj.Text = "Dnevni izvještaj";
             btnIzvjestaj.UseVisualStyleBackColor = true;
+            btnIzvjestaj.Click += btnIzvjestaj_Click;
             // 
             // frmNalozi
             // 

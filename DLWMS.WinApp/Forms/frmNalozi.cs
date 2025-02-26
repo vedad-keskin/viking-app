@@ -1,6 +1,7 @@
 ﻿using DLWMS.Data.Models;
 using DLWMS.Infrastructure;
 using DLWMS.WinApp.Helpers;
+using DLWMS.WinApp.Izvjestaji;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,7 @@ namespace DLWMS.WinApp.Forms
 
                 // Ako se filtrira novi datum da se dodati nalog stavi na taj datum
 
-                if(DateTime.Now.Date == dtpDatumFilter.Value.Date)
+                if (DateTime.Now.Date == dtpDatumFilter.Value.Date)
                 {
 
                     noviNalog.RadnikId = radnik.Id;
@@ -73,7 +74,7 @@ namespace DLWMS.WinApp.Forms
                     noviNalog.VoziloId = vozilo.Id;
                     noviNalog.Datum = DateTime.Now;
                     noviNalog.Iznos = iznos;
-                    
+
                 }
                 else
                 {
@@ -128,7 +129,7 @@ namespace DLWMS.WinApp.Forms
             }
 
             lblUkupno.Text = $"Ukupno {dnevniNalozi.Sum(x => x.Iznos)} KM";
-            Text = $"Viking - Datum";
+            Text = $"Viking - {odabraniDatum.ToString("dd.MM.yyyy")}";
         }
 
         private void frmNalozi_FormClosing(object sender, FormClosingEventArgs e)
@@ -152,6 +153,17 @@ namespace DLWMS.WinApp.Forms
                     UcitajNaloge();
                 }
 
+
+            }
+            else if (Uredi.Index == e.ColumnIndex)
+            {
+
+                var frmNalogEdit = new frmNaloziEdit(odabraniNalog);
+
+                if (frmNalogEdit.ShowDialog() == DialogResult.OK)
+                {
+                    UcitajNaloge();
+                }
 
             }
 
@@ -181,6 +193,13 @@ namespace DLWMS.WinApp.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             dtpDatumFilter.Value = dtpDatumFilter.Value.AddDays(-1);
+        }
+
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+            var noviIzvjestaj = new frmIzvjestaji();
+
+            noviIzvjestaj.ShowDialog();
         }
     }
 }
