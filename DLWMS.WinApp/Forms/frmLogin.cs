@@ -40,24 +40,34 @@ namespace DLWMS.WinApp.Forms
                 var korisnickoIme = txtKorisnickoIme.Text.ToLower();
                 var lozinka = txtLozinka.Text.ToLower();
 
-                var korisnik = await db.Radnici.Where(x => x.Username.ToLower() == korisnickoIme).FirstOrDefaultAsync();
+                frmLoading loadingScreen = new frmLoading();
+                loadingScreen.Show();
+                loadingScreen.Refresh(); // Ensure it renders before the task starts
 
-                if(korisnik == null || korisnik.Password != lozinka)
+                try
                 {
-                    MessageBox.Show("Korisnički podaci nisu ispravni","Upozorenje",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    var frmNalozi = new frmNalozi(korisnik.Id);
+                    var korisnik = await db.Radnici
+                        .Where(x => x.Username.ToLower() == korisnickoIme)
+                        .FirstOrDefaultAsync();
 
-                    if(frmNalozi.ShowDialog() == DialogResult.OK)
+                    if (korisnik == null || string.IsNullOrEmpty(korisnik.Password) || korisnik.Password != lozinka)
                     {
-                        txtKorisnickoIme.Clear();
-                        txtLozinka.Clear();
+                        MessageBox.Show("Korisnički podaci nisu ispravni", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        var frmNalozi = new frmNalozi(korisnik.Id);
+                        if (frmNalozi.ShowDialog() == DialogResult.OK)
+                        {
+                            txtKorisnickoIme.Clear();
+                            txtLozinka.Clear();
+                        }
                     }
                 }
-
-
+                finally
+                {
+                    loadingScreen.Close(); // Close the loading screen when login is complete
+                }
             }
         }
 
