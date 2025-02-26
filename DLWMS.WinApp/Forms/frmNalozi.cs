@@ -34,9 +34,12 @@ namespace DLWMS.WinApp.Forms
         private void UcitajComboBox()
         {
             cbUsluga.DataSource = db.Usluge.ToList();
-            cbRadnik.DataSource = db.Radnici.ToList();
             cbVozilo.DataSource = db.Vozila.ToList();
             cbFirma.DataSource = db.Firme.ToList();
+            cbRadnik.DataSource = db.Radnici.ToList();
+
+            cbRadnik.SelectedIndex = id - 1;
+
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -87,13 +90,18 @@ namespace DLWMS.WinApp.Forms
         {
             var nalozi = db.Nalozi.ToList();
 
-            if(nalozi != null)
+            if (nalozi != null)
             {
 
                 dgvNalozi.DataSource = null;
                 dgvNalozi.DataSource = nalozi;
 
             }
+        }
+
+        private void frmNalozi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }

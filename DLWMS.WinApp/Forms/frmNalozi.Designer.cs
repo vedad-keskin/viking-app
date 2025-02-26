@@ -272,6 +272,7 @@
             Name = "frmNalozi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Placeholder";
+            FormClosing += frmNalozi_FormClosing;
             Load += frmNalozi_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).EndInit();
             ((System.ComponentModel.ISupportInitialize)err).EndInit();

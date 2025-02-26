@@ -35,7 +35,7 @@ namespace DLWMS.WinApp.Forms
 
         private async void btnPrijava_Click(object sender, EventArgs e)
         {
-            if (Validiraj())
+            if (ValidirajUnos())
             {
                 var korisnickoIme = txtKorisnickoIme.Text.ToLower();
                 var lozinka = txtLozinka.Text.ToLower();
@@ -50,14 +50,18 @@ namespace DLWMS.WinApp.Forms
                 {
                     var frmNalozi = new frmNalozi(korisnik.Id);
 
-                    frmNalozi.ShowDialog();
+                    if(frmNalozi.ShowDialog() == DialogResult.OK)
+                    {
+                        txtKorisnickoIme.Clear();
+                        txtLozinka.Clear();
+                    }
                 }
 
 
             }
         }
 
-        private bool Validiraj()
+        private bool ValidirajUnos()
         {
             return Validator.ProvjeriUnos(txtKorisnickoIme, err, "Obavezno polje")
                 &&
