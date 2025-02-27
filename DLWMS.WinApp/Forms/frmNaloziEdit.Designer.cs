@@ -156,7 +156,7 @@
             // lblDatum
             // 
             lblDatum.AutoSize = true;
-            lblDatum.Location = new Point(16, 151);
+            lblDatum.Location = new Point(14, 156);
             lblDatum.Name = "lblDatum";
             lblDatum.Size = new Size(57, 20);
             lblDatum.TabIndex = 3;
@@ -164,7 +164,7 @@
             // 
             // dtpDatum
             // 
-            dtpDatum.Location = new Point(90, 151);
+            dtpDatum.Location = new Point(90, 153);
             dtpDatum.Name = "dtpDatum";
             dtpDatum.Size = new Size(250, 27);
             dtpDatum.TabIndex = 15;

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFaktura" targetNamespace="http://tempuri.org/dsFaktura.xsd" xmlns:mstns="http://tempuri.org/dsFaktura.xsd" xmlns="http://tempuri.org/dsFaktura.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFaktura" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsFaktura" msprop:Generator_DataSetName="dsFaktura">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsFaktura" msprop:Generator_RowEvHandlerName="dsFakturaRowChangeEventHandler" msprop:Generator_RowDeletedName="dsFakturaRowDeleted" msprop:Generator_RowDeletingName="dsFakturaRowDeleting" msprop:Generator_RowEvArgName="dsFakturaRowChangeEvent" msprop:Generator_TablePropName="_dsFaktura" msprop:Generator_RowChangedName="dsFakturaRowChanged" msprop:Generator_RowChangingName="dsFakturaRowChanging" msprop:Generator_TableClassName="dsFakturaDataTable" msprop:Generator_RowClassName="dsFakturaRow" msprop:Generator_TableVarName="tabledsFaktura" msprop:Generator_UserTableName="dsFaktura">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Datum" msprop:Generator_ColumnPropNameInRow="Datum" msprop:Generator_ColumnPropNameInTable="DatumColumn" msprop:Generator_ColumnVarNameInTable="columnDatum" msprop:Generator_UserColumnName="Datum" type="xs:string" minOccurs="0" />
+              <xs:element name="Vozilo" msprop:Generator_ColumnPropNameInRow="Vozilo" msprop:Generator_ColumnPropNameInTable="VoziloColumn" msprop:Generator_ColumnVarNameInTable="columnVozilo" msprop:Generator_UserColumnName="Vozilo" type="xs:string" minOccurs="0" />
+              <xs:element name="Usluga" msprop:Generator_ColumnPropNameInRow="Usluga" msprop:Generator_ColumnPropNameInTable="UslugaColumn" msprop:Generator_ColumnVarNameInTable="columnUsluga" msprop:Generator_UserColumnName="Usluga" type="xs:string" minOccurs="0" />
+              <xs:element name="Kolicina" msprop:Generator_ColumnPropNameInRow="Kolicina" msprop:Generator_ColumnPropNameInTable="KolicinaColumn" msprop:Generator_ColumnVarNameInTable="columnKolicina" msprop:Generator_UserColumnName="Kolicina" type="xs:string" minOccurs="0" />
+              <xs:element name="Iznos" msprop:Generator_ColumnPropNameInRow="Iznos" msprop:Generator_ColumnPropNameInTable="IznosColumn" msprop:Generator_ColumnVarNameInTable="columnIznos" msprop:Generator_UserColumnName="Iznos" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

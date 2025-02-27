@@ -44,7 +44,7 @@ namespace DLWMS.WinApp.Forms
             cbRadnik.DataSource = db.Radnici.ToList();
 
 
-            if(vrsta == 1) // dft korisnik na vulk said
+            if (vrsta == 1) // dft korisnik na vulk said
             {
                 cbRadnik.SelectedIndex = 0;
             }
@@ -168,17 +168,17 @@ namespace DLWMS.WinApp.Forms
 
             if (reproMaterijalNalozi.Count() != 0)
             {
+
                 saidProcenat += reproMaterijalNalozi.Sum(x => x.Iznos);
 
             }
 
-            MessageBox.Show($"{reproMaterijalNalozi.Count()} <--");
 
             var dnevniNaloziBezRepro = dnevniNalozi
                            .Where(x => x.Usluga != null && !reportMaterijal.Contains(x.Usluga.Naziv))
                            .ToList();
 
-            float senoProcenat = (float)((dnevniNaloziBezRepro.Sum(x=> x.Iznos)) * 0.25);
+            float senoProcenat = (float)((dnevniNaloziBezRepro.Sum(x => x.Iznos)) * 0.25);
 
             float hareProcenat = 0;
 
@@ -237,7 +237,8 @@ namespace DLWMS.WinApp.Forms
                 beliProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.15);
 
 
-            }else if (vrsta == 2) // PRAONICA 
+            }
+            else if (vrsta == 2) // PRAONICA 
             {
 
                 // SAID SAM P 
@@ -303,6 +304,8 @@ namespace DLWMS.WinApp.Forms
                                $"Beli procenat : {beliProcenat} KM\r\n";
 
         }
+
+
 
         private void frmNalozi_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -377,15 +380,24 @@ namespace DLWMS.WinApp.Forms
         private void btnVulkanizerska_Click(object sender, EventArgs e)
         {
             vrsta = 1;
-            UcitajComboBox();
             UcitajNaloge();
+            UcitajComboBox();
         }
 
         private void btnPraonica_Click(object sender, EventArgs e)
         {
             vrsta = 2;
-            UcitajComboBox();
             UcitajNaloge();
+            UcitajComboBox();
+        }
+
+        private void btnFaktura_Click(object sender, EventArgs e)
+        {
+
+            var frmOdabirFakture = new frmFakturaSelect();
+
+            frmOdabirFakture.ShowDialog();
+
         }
     }
 }

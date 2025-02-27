@@ -45,10 +45,21 @@ namespace DLWMS.WinApp.Forms
 
         private void UcitajInfo()
         {
-            cbFirma.SelectedIndex = odabraniNalog.FirmaId - 1 ?? 0;
-            cbRadnik.SelectedIndex = odabraniNalog?.RadnikId - 1 ?? 0;
-            cbUsluga.SelectedIndex = odabraniNalog?.UslugaId - 1 ?? 0;
-            cbVozilo.SelectedIndex = odabraniNalog?.VoziloId - 1 ?? 0;
+            cbFirma.SelectedIndex = cbFirma.Items.Cast<Firma>().ToList()
+                 .FindIndex(f => f.Id == odabraniNalog.FirmaId);
+
+            cbRadnik.SelectedIndex = cbRadnik.Items.Cast<Radnik>().ToList()
+                .FindIndex(r => r.Id == odabraniNalog.RadnikId);
+
+            cbUsluga.SelectedIndex = cbUsluga.Items.Cast<Usluga>().ToList()
+                .FindIndex(u => u.Id == odabraniNalog.UslugaId);
+
+            cbVozilo.SelectedIndex = cbVozilo.Items.Cast<Vozilo>().ToList()
+                .FindIndex(v => v.Id == odabraniNalog.VoziloId);
+
+            txtIznos.Text = odabraniNalog.Iznos.ToString();
+            txtKolicina.Text = odabraniNalog.Kolicina.ToString();
+            dtpDatum.Value = odabraniNalog.Datum;
 
             txtIznos.Text = odabraniNalog?.Iznos.ToString() ?? string.Empty;
             txtKolicina.Text = odabraniNalog?.Kolicina.ToString() ?? string.Empty;

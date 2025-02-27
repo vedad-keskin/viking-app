@@ -9,10 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fakture\rptFaktura.rdlc" />
     <None Remove="Izvjestaji\rptKartonStudenta.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fakture\rptFaktura.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaji\rptKartonStudenta.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -28,6 +32,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Fakture\dsFaktura.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsFaktura.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Fakture\frmFaktura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Izvjestaji\dsDLWMS.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -59,6 +71,10 @@
   <ItemGroup>
     <None Update="DLWMS.db">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Fakture\dsFaktura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFaktura.Designer.cs</LastGenOutput>
     </None>
     <None Update="Izvjestaji\dsDLWMS.xsd">
       <Generator>MSDataSetGenerator</Generator>

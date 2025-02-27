@@ -65,6 +65,7 @@
             btnVulkanizerska = new Button();
             btnPraonica = new Button();
             lblVrsta = new Label();
+            btnFaktura = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)err).BeginInit();
             statusStrip1.SuspendLayout();
@@ -131,7 +132,7 @@
             cbRadnik.Location = new Point(12, 137);
             cbRadnik.Name = "cbRadnik";
             cbRadnik.Size = new Size(189, 28);
-            cbRadnik.TabIndex = 1;
+            cbRadnik.TabIndex = 10;
             // 
             // cbUsluga
             // 
@@ -140,14 +141,14 @@
             cbUsluga.Location = new Point(207, 137);
             cbUsluga.Name = "cbUsluga";
             cbUsluga.Size = new Size(189, 28);
-            cbUsluga.TabIndex = 1;
+            cbUsluga.TabIndex = 5;
             // 
             // txtKolicina
             // 
             txtKolicina.Location = new Point(405, 137);
             txtKolicina.Name = "txtKolicina";
             txtKolicina.Size = new Size(125, 27);
-            txtKolicina.TabIndex = 2;
+            txtKolicina.TabIndex = 1;
             // 
             // cbVozilo
             // 
@@ -156,7 +157,7 @@
             cbVozilo.Location = new Point(536, 137);
             cbVozilo.Name = "cbVozilo";
             cbVozilo.Size = new Size(189, 28);
-            cbVozilo.TabIndex = 1;
+            cbVozilo.TabIndex = 6;
             // 
             // cbFirma
             // 
@@ -165,7 +166,7 @@
             cbFirma.Location = new Point(731, 136);
             cbFirma.Name = "cbFirma";
             cbFirma.Size = new Size(189, 28);
-            cbFirma.TabIndex = 1;
+            cbFirma.TabIndex = 7;
             // 
             // txtIznos
             // 
@@ -324,7 +325,7 @@
             btnBack.Location = new Point(12, 12);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(69, 50);
-            btnBack.TabIndex = 7;
+            btnBack.TabIndex = 8;
             btnBack.Text = "<";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
@@ -335,7 +336,7 @@
             btnNext.Location = new Point(553, 12);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(69, 50);
-            btnNext.TabIndex = 7;
+            btnNext.TabIndex = 9;
             btnNext.Text = ">";
             btnNext.UseVisualStyleBackColor = true;
             btnNext.Click += btnNext_Click;
@@ -399,11 +400,22 @@
             lblVrsta.TabIndex = 12;
             lblVrsta.Text = "Vrsta placeholder";
             // 
+            // btnFaktura
+            // 
+            btnFaktura.Location = new Point(828, 549);
+            btnFaktura.Name = "btnFaktura";
+            btnFaktura.Size = new Size(153, 29);
+            btnFaktura.TabIndex = 13;
+            btnFaktura.Text = "Napravi fakturu";
+            btnFaktura.UseVisualStyleBackColor = true;
+            btnFaktura.Click += btnFaktura_Click;
+            // 
             // frmNalozi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1190, 718);
+            Controls.Add(btnFaktura);
             Controls.Add(lblVrsta);
             Controls.Add(btnPraonica);
             Controls.Add(btnVulkanizerska);
@@ -479,5 +491,6 @@
         private DataGridViewTextBoxColumn Radnik;
         private DataGridViewButtonColumn Uredi;
         private DataGridViewButtonColumn Obrisi;
+        private Button btnFaktura;
     }
 }
