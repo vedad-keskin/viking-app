@@ -30,6 +30,7 @@ namespace DLWMS.WinApp.Fakture
         {
             UcitajIzvjestaj();
 
+            reportViewer1.LocalReport.DisplayName = $"Faktura - {firma} - {DateTime.Now.ToShortDateString()}";
             reportViewer1.RefreshReport(); 
         }
 
@@ -79,6 +80,7 @@ namespace DLWMS.WinApp.Fakture
             rpc.Add(new ReportParameter("id", firma?.IDbr ?? "N/A"));
             rpc.Add(new ReportParameter("pdv", firma?.PDVbr ?? "N/A"));
             rpc.Add(new ReportParameter("rok", rok.ToString() ?? "N/A"));
+            rpc.Add(new ReportParameter("datum", DateTime.Now.ToShortDateString()));
 
             var brojFakture = $"{brojUgovora}-{DateTime.Now.Month}/{DateTime.Now.Year}";
 

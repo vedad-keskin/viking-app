@@ -34,7 +34,7 @@
             // reportViewer1
             // 
             reportViewer1.Dock = DockStyle.Fill;
-            reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinApp.Izvjestaji.rptKartonStudenta.rdlc";
+            reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinApp.Izvjestaji.rptDnevniIzvjestaj.rdlc";
             reportViewer1.Location = new Point(0, 0);
             reportViewer1.Margin = new Padding(3, 4, 3, 4);
             reportViewer1.Name = "ReportViewer";

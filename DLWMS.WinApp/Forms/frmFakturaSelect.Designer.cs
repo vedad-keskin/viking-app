@@ -59,9 +59,10 @@
             cbFirma.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFirma.FormattingEnabled = true;
             cbFirma.Location = new Point(67, 63);
+            cbFirma.MaxDropDownItems = 7;
             cbFirma.Name = "cbFirma";
             cbFirma.Size = new Size(188, 28);
-            cbFirma.TabIndex = 1;
+            cbFirma.TabIndex = 7;
             // 
             // lblDatumOd
             // 
@@ -77,7 +78,7 @@
             dtpDatumOd.Location = new Point(52, 14);
             dtpDatumOd.Name = "dtpDatumOd";
             dtpDatumOd.Size = new Size(270, 27);
-            dtpDatumOd.TabIndex = 2;
+            dtpDatumOd.TabIndex = 5;
             // 
             // lblDatumDo
             // 
@@ -93,7 +94,7 @@
             dtpDatumDo.Location = new Point(361, 14);
             dtpDatumDo.Name = "dtpDatumDo";
             dtpDatumDo.Size = new Size(270, 27);
-            dtpDatumDo.TabIndex = 3;
+            dtpDatumDo.TabIndex = 6;
             // 
             // label1
             // 

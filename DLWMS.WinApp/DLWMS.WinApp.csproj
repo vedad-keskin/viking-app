@@ -10,14 +10,14 @@
 
   <ItemGroup>
     <None Remove="Fakture\rptFaktura.rdlc" />
-    <None Remove="Izvjestaji\rptKartonStudenta.rdlc" />
+    <None Remove="Izvjestaji\rptDnevniIzvjestaj.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Fakture\rptFaktura.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Izvjestaji\rptKartonStudenta.rdlc">
+    <EmbeddedResource Include="Izvjestaji\rptDnevniIzvjestaj.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

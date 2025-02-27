@@ -23,6 +23,8 @@ namespace DLWMS.WinApp.Izvjestaji
         {
             UcitajIzvjestaj();
 
+
+            reportViewer1.LocalReport.DisplayName = $"Dnevni izvještaj - {DateTime.Now.ToShortDateString()}";
             reportViewer1.RefreshReport(); 
         }
 

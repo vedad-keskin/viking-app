@@ -73,9 +73,9 @@ namespace DLWMS.WinApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap viking {
+        internal static System.Drawing.Bitmap Viking_transparent {
             get {
-                object obj = ResourceManager.GetObject("viking", resourceCulture);
+                object obj = ResourceManager.GetObject("Viking_transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
