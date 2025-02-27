@@ -54,9 +54,6 @@
             Obrisi = new DataGridViewButtonColumn();
             err = new ErrorProvider(components);
             lblUkupno = new Label();
-            statusStrip1 = new StatusStrip();
-            tsslDatumIVrijeme = new ToolStripStatusLabel();
-            timer = new System.Windows.Forms.Timer(components);
             btnBack = new Button();
             btnNext = new Button();
             dtpDatumFilter = new DateTimePicker();
@@ -68,7 +65,6 @@
             btnFaktura = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)err).BeginInit();
-            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lblRadnik
@@ -297,28 +293,6 @@
             lblUkupno.Text = "Ukupno :";
             lblUkupno.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // statusStrip1
-            // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslDatumIVrijeme });
-            statusStrip1.Location = new Point(0, 692);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1190, 26);
-            statusStrip1.TabIndex = 6;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // tsslDatumIVrijeme
-            // 
-            tsslDatumIVrijeme.Name = "tsslDatumIVrijeme";
-            tsslDatumIVrijeme.Size = new Size(115, 20);
-            tsslDatumIVrijeme.Text = "Datum i vrijeme";
-            // 
-            // timer
-            // 
-            timer.Enabled = true;
-            timer.Interval = 60000;
-            timer.Tick += timer_Tick;
-            // 
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
@@ -414,7 +388,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1190, 718);
+            ClientSize = new Size(1190, 704);
             Controls.Add(btnFaktura);
             Controls.Add(lblVrsta);
             Controls.Add(btnPraonica);
@@ -424,7 +398,6 @@
             Controls.Add(dtpDatumFilter);
             Controls.Add(btnNext);
             Controls.Add(btnBack);
-            Controls.Add(statusStrip1);
             Controls.Add(lblUkupno);
             Controls.Add(dgvNalozi);
             Controls.Add(btnDodaj);
@@ -447,8 +420,6 @@
             Load += frmNalozi_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).EndInit();
             ((System.ComponentModel.ISupportInitialize)err).EndInit();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -471,9 +442,6 @@
         private DataGridView dgvNalozi;
         private ErrorProvider err;
         private Label lblUkupno;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel tsslDatumIVrijeme;
-        private System.Windows.Forms.Timer timer;
         private Button btnBack;
         private DateTimePicker dtpDatumFilter;
         private Button btnNext;

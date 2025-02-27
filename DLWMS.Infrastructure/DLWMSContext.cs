@@ -9,7 +9,7 @@ namespace DLWMS.Infrastructure
     public class DLWMSContext : DbContext
     {
       
-        private string konekcijskiString = ConfigurationManager.ConnectionStrings["DLWMSBaza"].ConnectionString;
+        private string konekcijskiString = ConfigurationManager.ConnectionStrings["VikingBaza"].ConnectionString;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(konekcijskiString);

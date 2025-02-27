@@ -1,5 +1,6 @@
 ﻿using DLWMS.Data.Models;
 using DLWMS.Infrastructure;
+using DLWMS.WinApp.Izvjestaji;
 using Microsoft.Reporting.WinForms;
 
 namespace DLWMS.WinApp.Izvjestaji

@@ -33,7 +33,7 @@ namespace DLWMS.WinApp.Forms
             dgvNalozi.AutoGenerateColumns = false;
             UcitajComboBox();
             UcitajNaloge();
-            UcitajVrijeme();
+            
         }
 
         private void UcitajComboBox()
@@ -345,15 +345,7 @@ namespace DLWMS.WinApp.Forms
 
         }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            UcitajVrijeme();
-        }
 
-        private void UcitajVrijeme()
-        {
-            tsslDatumIVrijeme.Text = $"Datum i vrijeme: {DateTime.Now.ToString("dd.mm.yyyy HH:mm")}";
-        }
 
         private void dtpDatumFilter_ValueChanged(object sender, EventArgs e)
         {

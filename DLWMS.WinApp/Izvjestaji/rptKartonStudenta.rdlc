@@ -73,6 +73,7 @@
                   <TextRun>
                     <Value>Dnevni izvještaj na dan</Value>
                     <Style>
+                      <FontFamily>gill Sans MT</FontFamily>
                       <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -87,6 +88,7 @@
                   <TextRun>
                     <Value>=Parameters!datum.Value</Value>
                     <Style>
+                      <FontFamily>gill Sans MT</FontFamily>
                       <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -98,52 +100,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.55317cm</Top>
+            <Top>4.32084cm</Top>
             <Left>6.21453cm</Left>
-            <Height>1.4255cm</Height>
+            <Height>1.5525cm</Height>
             <Width>7.66467cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox19">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Dnevni izvještaj je zaključen sa ukupnim iznosom od </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!iznos.Value</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value> KM</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox19</rd:DefaultName>
-            <Top>5.6755cm</Top>
-            <Left>0.39899cm</Left>
-            <Height>0.64233cm</Height>
-            <Width>15.2cm</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -197,6 +157,7 @@
                                 <TextRun>
                                   <Value>Rb</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -232,6 +193,7 @@
                                 <TextRun>
                                   <Value>Radnik</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -267,6 +229,7 @@
                                 <TextRun>
                                   <Value>Vozilo</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -302,6 +265,7 @@
                                 <TextRun>
                                   <Value>Usluga</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -337,6 +301,7 @@
                                 <TextRun>
                                   <Value>Kolicina</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -372,6 +337,7 @@
                                 <TextRun>
                                   <Value>Datum</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -407,6 +373,7 @@
                                 <TextRun>
                                   <Value>Firma</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -442,6 +409,7 @@
                                 <TextRun>
                                   <Value>Iznos</Value>
                                   <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -481,7 +449,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Rb.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -513,7 +483,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Radnik.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -545,7 +517,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Vozilo.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -577,7 +551,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Usluga.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -609,11 +585,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Kolicina.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value> kom</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -645,7 +625,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Datum.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -677,7 +659,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Firma.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -709,11 +693,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Iznos.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value> KM</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>gill Sans MT</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -762,148 +750,183 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsDnevniIzvjestaj</DataSetName>
-            <Top>3.2625cm</Top>
+            <Top>6.73383cm</Top>
             <Left>0.39899cm</Left>
             <Height>1.2cm</Height>
-            <Width>19.05637cm</Width>
-            <ZIndex>2</ZIndex>
+            <Width>19.05638cm</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>logo_black</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.30027cm</Top>
+            <Left>16.2832cm</Left>
+            <Height>2.68533cm</Height>
+            <Width>2.74883cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Vezani obrt "VIKING"</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1. Mart, 88420 Jablanica</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ID br : 4329082250006</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Broj žiro računa : 1995310006860519</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.30027cm</Top>
+            <Left>0.39899cm</Left>
+            <Height>2.52617cm</Height>
+            <Width>9.71783cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Dnevni izvještaj je zaključen sa ukupnim iznosom od </Value>
+                    <Style>
+                      <FontFamily>gill Sans MT</FontFamily>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!iznos.Value</Value>
+                    <Style>
+                      <FontFamily>gill Sans MT</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> KM.</Value>
+                    <Style>
+                      <FontFamily>gill Sans MT</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>9.4107cm</Top>
+            <Left>0.39899cm</Left>
+            <Height>0.6cm</Height>
+            <Width>12.66cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>2.84526in</Height>
+        <Height>4.34526in</Height>
         <Style />
       </Body>
       <Width>7.71793in</Width>
       <Page>
-        <PageHeader>
-          <Height>3.6082cm</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Vezani obrt "VIKING"</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Gill Sans MT</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>1. Mart, 88420 Jablanica</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Gill Sans MT</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>ID br : 4329082250006</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Gill Sans MT</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Broj žiro računa : 1995310006860519</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Gill Sans MT</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.49953cm</Top>
-              <Left>0.39899cm</Left>
-              <Height>2.52617cm</Height>
-              <Width>9.71783cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>logo_black</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>0.49953cm</Top>
-              <Left>15.95649cm</Left>
-              <Height>2.68533cm</Height>
-              <Width>2.74883cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
         <PageFooter>
           <Height>1.143cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
@@ -917,11 +940,15 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Izvještaj kreiran: </Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>gill Sans MT</FontFamily>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!ExecutionTime</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>gill Sans MT</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -950,15 +977,21 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Globals!OverallPageNumber</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>gill Sans MT</FontFamily>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>/</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>gill Sans MT</FontFamily>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!OverallTotalPages</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>gill Sans MT</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
