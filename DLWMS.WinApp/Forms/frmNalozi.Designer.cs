@@ -43,13 +43,13 @@
             txtIznos = new TextBox();
             btnDodaj = new Button();
             dgvNalozi = new DataGridView();
-            Radnik = new DataGridViewTextBoxColumn();
             Vozilo = new DataGridViewTextBoxColumn();
             Usluga = new DataGridViewTextBoxColumn();
             Kolicina = new DataGridViewTextBoxColumn();
             Firma = new DataGridViewTextBoxColumn();
             Datum = new DataGridViewTextBoxColumn();
             Iznos = new DataGridViewTextBoxColumn();
+            Radnik = new DataGridViewTextBoxColumn();
             Uredi = new DataGridViewButtonColumn();
             Obrisi = new DataGridViewButtonColumn();
             err = new ErrorProvider(components);
@@ -61,6 +61,10 @@
             btnNext = new Button();
             dtpDatumFilter = new DateTimePicker();
             btnIzvjestaj = new Button();
+            lblProcenti = new Label();
+            btnVulkanizerska = new Button();
+            btnPraonica = new Button();
+            lblVrsta = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)err).BeginInit();
             statusStrip1.SuspendLayout();
@@ -69,7 +73,7 @@
             // lblRadnik
             // 
             lblRadnik.AutoSize = true;
-            lblRadnik.Location = new Point(12, 82);
+            lblRadnik.Location = new Point(12, 114);
             lblRadnik.Name = "lblRadnik";
             lblRadnik.Size = new Size(57, 20);
             lblRadnik.TabIndex = 0;
@@ -78,7 +82,7 @@
             // lblUsluga
             // 
             lblUsluga.AutoSize = true;
-            lblUsluga.Location = new Point(207, 82);
+            lblUsluga.Location = new Point(207, 114);
             lblUsluga.Name = "lblUsluga";
             lblUsluga.Size = new Size(57, 20);
             lblUsluga.TabIndex = 0;
@@ -87,7 +91,7 @@
             // lblVozilo
             // 
             lblVozilo.AutoSize = true;
-            lblVozilo.Location = new Point(536, 82);
+            lblVozilo.Location = new Point(536, 114);
             lblVozilo.Name = "lblVozilo";
             lblVozilo.Size = new Size(53, 20);
             lblVozilo.TabIndex = 0;
@@ -96,7 +100,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(731, 82);
+            label4.Location = new Point(731, 114);
             label4.Name = "label4";
             label4.Size = new Size(49, 20);
             label4.TabIndex = 0;
@@ -105,7 +109,7 @@
             // lblKolicina
             // 
             lblKolicina.AutoSize = true;
-            lblKolicina.Location = new Point(405, 82);
+            lblKolicina.Location = new Point(405, 114);
             lblKolicina.Name = "lblKolicina";
             lblKolicina.Size = new Size(65, 20);
             lblKolicina.TabIndex = 0;
@@ -114,7 +118,7 @@
             // lblIznos
             // 
             lblIznos.AutoSize = true;
-            lblIznos.Location = new Point(926, 82);
+            lblIznos.Location = new Point(926, 114);
             lblIznos.Name = "lblIznos";
             lblIznos.Size = new Size(46, 20);
             lblIznos.TabIndex = 0;
@@ -124,7 +128,7 @@
             // 
             cbRadnik.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRadnik.FormattingEnabled = true;
-            cbRadnik.Location = new Point(12, 105);
+            cbRadnik.Location = new Point(12, 137);
             cbRadnik.Name = "cbRadnik";
             cbRadnik.Size = new Size(189, 28);
             cbRadnik.TabIndex = 1;
@@ -133,14 +137,14 @@
             // 
             cbUsluga.DropDownStyle = ComboBoxStyle.DropDownList;
             cbUsluga.FormattingEnabled = true;
-            cbUsluga.Location = new Point(207, 105);
+            cbUsluga.Location = new Point(207, 137);
             cbUsluga.Name = "cbUsluga";
             cbUsluga.Size = new Size(189, 28);
             cbUsluga.TabIndex = 1;
             // 
             // txtKolicina
             // 
-            txtKolicina.Location = new Point(405, 105);
+            txtKolicina.Location = new Point(405, 137);
             txtKolicina.Name = "txtKolicina";
             txtKolicina.Size = new Size(125, 27);
             txtKolicina.TabIndex = 2;
@@ -149,7 +153,7 @@
             // 
             cbVozilo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbVozilo.FormattingEnabled = true;
-            cbVozilo.Location = new Point(536, 105);
+            cbVozilo.Location = new Point(536, 137);
             cbVozilo.Name = "cbVozilo";
             cbVozilo.Size = new Size(189, 28);
             cbVozilo.TabIndex = 1;
@@ -158,21 +162,21 @@
             // 
             cbFirma.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFirma.FormattingEnabled = true;
-            cbFirma.Location = new Point(731, 104);
+            cbFirma.Location = new Point(731, 136);
             cbFirma.Name = "cbFirma";
             cbFirma.Size = new Size(189, 28);
             cbFirma.TabIndex = 1;
             // 
             // txtIznos
             // 
-            txtIznos.Location = new Point(926, 106);
+            txtIznos.Location = new Point(926, 138);
             txtIznos.Name = "txtIznos";
             txtIznos.Size = new Size(125, 27);
             txtIznos.TabIndex = 2;
             // 
             // btnDodaj
             // 
-            btnDodaj.Location = new Point(1057, 106);
+            btnDodaj.Location = new Point(1057, 138);
             btnDodaj.Name = "btnDodaj";
             btnDodaj.Size = new Size(121, 29);
             btnDodaj.TabIndex = 3;
@@ -185,8 +189,8 @@
             dgvNalozi.AllowUserToAddRows = false;
             dgvNalozi.AllowUserToDeleteRows = false;
             dgvNalozi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNalozi.Columns.AddRange(new DataGridViewColumn[] { Radnik, Vozilo, Usluga, Kolicina, Firma, Datum, Iznos, Uredi, Obrisi });
-            dgvNalozi.Location = new Point(12, 139);
+            dgvNalozi.Columns.AddRange(new DataGridViewColumn[] { Vozilo, Usluga, Kolicina, Firma, Datum, Iznos, Radnik, Uredi, Obrisi });
+            dgvNalozi.Location = new Point(12, 171);
             dgvNalozi.Name = "dgvNalozi";
             dgvNalozi.ReadOnly = true;
             dgvNalozi.RowHeadersWidth = 51;
@@ -194,15 +198,6 @@
             dgvNalozi.Size = new Size(1166, 362);
             dgvNalozi.TabIndex = 4;
             dgvNalozi.CellClick += dgvNalozi_CellClick;
-            // 
-            // Radnik
-            // 
-            Radnik.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Radnik.DataPropertyName = "Radnik";
-            Radnik.HeaderText = "Uradio";
-            Radnik.MinimumWidth = 6;
-            Radnik.Name = "Radnik";
-            Radnik.ReadOnly = true;
             // 
             // Vozilo
             // 
@@ -258,6 +253,15 @@
             Iznos.ReadOnly = true;
             Iznos.Width = 80;
             // 
+            // Radnik
+            // 
+            Radnik.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Radnik.DataPropertyName = "Radnik";
+            Radnik.HeaderText = "Uradio";
+            Radnik.MinimumWidth = 6;
+            Radnik.Name = "Radnik";
+            Radnik.ReadOnly = true;
+            // 
             // Uredi
             // 
             Uredi.HeaderText = "";
@@ -284,10 +288,10 @@
             // 
             // lblUkupno
             // 
-            lblUkupno.Font = new Font("Segoe UI", 18F);
-            lblUkupno.Location = new Point(12, 507);
+            lblUkupno.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblUkupno.Location = new Point(12, 539);
             lblUkupno.Name = "lblUkupno";
-            lblUkupno.Size = new Size(241, 54);
+            lblUkupno.Size = new Size(404, 54);
             lblUkupno.TabIndex = 5;
             lblUkupno.Text = "Ukupno :";
             lblUkupno.TextAlign = ContentAlignment.MiddleLeft;
@@ -296,7 +300,7 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { tsslDatumIVrijeme });
-            statusStrip1.Location = new Point(0, 575);
+            statusStrip1.Location = new Point(0, 692);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(1190, 26);
             statusStrip1.TabIndex = 6;
@@ -347,7 +351,7 @@
             // 
             // btnIzvjestaj
             // 
-            btnIzvjestaj.Location = new Point(998, 517);
+            btnIzvjestaj.Location = new Point(998, 549);
             btnIzvjestaj.Name = "btnIzvjestaj";
             btnIzvjestaj.Size = new Size(180, 29);
             btnIzvjestaj.TabIndex = 9;
@@ -355,11 +359,55 @@
             btnIzvjestaj.UseVisualStyleBackColor = true;
             btnIzvjestaj.Click += btnIzvjestaj_Click;
             // 
+            // lblProcenti
+            // 
+            lblProcenti.AutoSize = true;
+            lblProcenti.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblProcenti.Location = new Point(19, 593);
+            lblProcenti.Name = "lblProcenti";
+            lblProcenti.Size = new Size(49, 92);
+            lblProcenti.TabIndex = 10;
+            lblProcenti.Text = "Seno\r\nSaid\r\nHare\r\nBeli";
+            // 
+            // btnVulkanizerska
+            // 
+            btnVulkanizerska.Location = new Point(12, 68);
+            btnVulkanizerska.Name = "btnVulkanizerska";
+            btnVulkanizerska.Size = new Size(167, 43);
+            btnVulkanizerska.TabIndex = 11;
+            btnVulkanizerska.Text = "Vulkanizerska";
+            btnVulkanizerska.UseVisualStyleBackColor = true;
+            btnVulkanizerska.Click += btnVulkanizerska_Click;
+            // 
+            // btnPraonica
+            // 
+            btnPraonica.Location = new Point(185, 68);
+            btnPraonica.Name = "btnPraonica";
+            btnPraonica.Size = new Size(167, 43);
+            btnPraonica.TabIndex = 11;
+            btnPraonica.Text = "Praonica";
+            btnPraonica.UseVisualStyleBackColor = true;
+            btnPraonica.Click += btnPraonica_Click;
+            // 
+            // lblVrsta
+            // 
+            lblVrsta.AutoSize = true;
+            lblVrsta.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblVrsta.Location = new Point(642, 17);
+            lblVrsta.Name = "lblVrsta";
+            lblVrsta.Size = new Size(264, 41);
+            lblVrsta.TabIndex = 12;
+            lblVrsta.Text = "Vrsta placeholder";
+            // 
             // frmNalozi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1190, 601);
+            ClientSize = new Size(1190, 718);
+            Controls.Add(lblVrsta);
+            Controls.Add(btnPraonica);
+            Controls.Add(btnVulkanizerska);
+            Controls.Add(lblProcenti);
             Controls.Add(btnIzvjestaj);
             Controls.Add(dtpDatumFilter);
             Controls.Add(btnNext);
@@ -411,15 +459,6 @@
         private DataGridView dgvNalozi;
         private ErrorProvider err;
         private Label lblUkupno;
-        private DataGridViewTextBoxColumn Radnik;
-        private DataGridViewTextBoxColumn Vozilo;
-        private DataGridViewTextBoxColumn Usluga;
-        private DataGridViewTextBoxColumn Kolicina;
-        private DataGridViewTextBoxColumn Firma;
-        private DataGridViewTextBoxColumn Datum;
-        private DataGridViewTextBoxColumn Iznos;
-        private DataGridViewButtonColumn Uredi;
-        private DataGridViewButtonColumn Obrisi;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel tsslDatumIVrijeme;
         private System.Windows.Forms.Timer timer;
@@ -427,5 +466,18 @@
         private DateTimePicker dtpDatumFilter;
         private Button btnNext;
         private Button btnIzvjestaj;
+        private Label lblProcenti;
+        private Label lblVrsta;
+        private Button btnPraonica;
+        private Button btnVulkanizerska;
+        private DataGridViewTextBoxColumn Vozilo;
+        private DataGridViewTextBoxColumn Usluga;
+        private DataGridViewTextBoxColumn Kolicina;
+        private DataGridViewTextBoxColumn Firma;
+        private DataGridViewTextBoxColumn Datum;
+        private DataGridViewTextBoxColumn Iznos;
+        private DataGridViewTextBoxColumn Radnik;
+        private DataGridViewButtonColumn Uredi;
+        private DataGridViewButtonColumn Obrisi;
     }
 }

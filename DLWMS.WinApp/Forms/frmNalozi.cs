@@ -20,6 +20,7 @@ namespace DLWMS.WinApp.Forms
         private int id;
         DLWMSContext db = new DLWMSContext();
         List<Nalog> dnevniNalozi;
+        int vrsta = 1;
 
         public frmNalozi(int id)
         {
@@ -37,12 +38,20 @@ namespace DLWMS.WinApp.Forms
 
         private void UcitajComboBox()
         {
-            cbUsluga.DataSource = db.Usluge.ToList();
+            cbUsluga.DataSource = db.Usluge.Where(x => x.VrstaId == vrsta).ToList();
             cbVozilo.DataSource = db.Vozila.ToList();
             cbFirma.DataSource = db.Firme.ToList();
             cbRadnik.DataSource = db.Radnici.ToList();
 
-            cbRadnik.SelectedIndex = id - 1;
+
+            if(vrsta == 1) // dft korisnik na vulk said
+            {
+                cbRadnik.SelectedIndex = 0;
+            }
+            else // hare na praoni
+            {
+                cbRadnik.SelectedIndex = 1;
+            }
 
         }
 
@@ -118,6 +127,7 @@ namespace DLWMS.WinApp.Forms
 
             dnevniNalozi = await db.Nalozi
                 .Where(x => x.Datum.Date == odabraniDatum.Date)
+                .Where(x => x.Usluga.VrstaId == vrsta)
                 .ToListAsync();
 
             if (dnevniNalozi != null)
@@ -130,6 +140,168 @@ namespace DLWMS.WinApp.Forms
 
             lblUkupno.Text = $"Ukupno {dnevniNalozi.Sum(x => x.Iznos)} KM";
             Text = $"Viking - {odabraniDatum.ToString("dd.MM.yyyy")}";
+
+            IzracunajProcenat();
+            lblVrsta.Text = vrsta == 1 ? "Vuklanizerska radnja" : "Praonica";
+
+        }
+
+        private void IzracunajProcenat()
+        {
+
+            float saidProcenat = 0;
+
+            // Dobivanje naloga koji nisu repro materijali
+
+            var reportMaterijal = new HashSet<string>
+              {
+                  "Ventil", "Pojas", "Zračnice",
+                  "BP1 Fleka", "BP2 Fleka", "BP3 Fleka",
+                  "BP4 Fleka", "BP5 Fleka"
+              };
+
+            // Računanje 100% od repro materijala
+
+            var reproMaterijalNalozi = dnevniNalozi
+                           .Where(x => x.Usluga != null && reportMaterijal.Contains(x.Usluga.Naziv))
+                           .ToList();
+
+            if (reproMaterijalNalozi.Count() != 0)
+            {
+                saidProcenat += reproMaterijalNalozi.Sum(x => x.Iznos);
+
+            }
+
+            MessageBox.Show($"{reproMaterijalNalozi.Count()} <--");
+
+            var dnevniNaloziBezRepro = dnevniNalozi
+                           .Where(x => x.Usluga != null && !reportMaterijal.Contains(x.Usluga.Naziv))
+                           .ToList();
+
+            float senoProcenat = (float)((dnevniNaloziBezRepro.Sum(x=> x.Iznos)) * 0.25);
+
+            float hareProcenat = 0;
+
+            float beliProcenat = 0;
+
+
+
+            if (vrsta == 1) // AKO JE VULKAZNIZERSKA
+            {
+                // SAID SAM V 
+
+                var saidRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 1);
+
+                saidProcenat += (float)(saidRadioSam.Sum(x => x.Iznos) * 0.75);
+
+                // HARE SAM
+
+                var hareRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 2);
+
+                hareProcenat += (float)(hareRadioSam.Sum(x => x.Iznos) * 0.25);
+
+                saidProcenat += (float)(hareRadioSam.Sum(x => x.Iznos) * 0.50);
+
+                // BELI SAM
+
+                var beliRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 3);
+
+                beliProcenat += (float)(beliRadioSam.Sum(x => x.Iznos) * 0.25);
+
+                saidProcenat += (float)(beliRadioSam.Sum(x => x.Iznos) * 0.50);
+
+                // SAID I HARIS
+
+                var saidHarisRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 4);
+
+                saidProcenat += (float)(saidHarisRadio.Sum(x => x.Iznos) * 0.60);
+
+                hareProcenat += (float)(saidHarisRadio.Sum(x => x.Iznos) * 0.15);
+
+                // BELI I HARIS
+
+                var beliHarisRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 5);
+
+                saidProcenat += (float)(beliHarisRadio.Sum(x => x.Iznos) * 0.45);
+
+                hareProcenat += (float)(beliHarisRadio.Sum(x => x.Iznos) * 0.15);
+
+                beliProcenat += (float)(beliHarisRadio.Sum(x => x.Iznos) * 0.15);
+
+                // SAID I BELI
+
+                var saidBeliRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 6);
+
+                saidProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.60);
+
+                beliProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.15);
+
+
+            }else if (vrsta == 2) // PRAONICA 
+            {
+
+                // SAID SAM P 
+
+                var saidRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 1);
+
+                saidProcenat += (float)(saidRadioSam.Sum(x => x.Iznos) * 0.25);
+
+                hareProcenat += (float)(saidRadioSam.Sum(x => x.Iznos) * 0.50);
+
+                // HARE SAM 
+
+                var hareRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 2);
+
+                hareProcenat += (float)(hareRadioSam.Sum(x => x.Iznos) * 0.75);
+
+                // BELI SAM 
+
+                var beliRadioSam = dnevniNaloziBezRepro.Where(x => x.RadnikId == 3);
+
+                hareProcenat += (float)(beliRadioSam.Sum(x => x.Iznos) * 0.50);
+
+                beliProcenat += (float)(beliRadioSam.Sum(x => x.Iznos) * 0.25);
+
+                // SAID I HARIS
+
+                var saidHarisRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 4);
+
+                saidProcenat += (float)(saidHarisRadio.Sum(x => x.Iznos) * 0.15);
+
+                hareProcenat += (float)(saidHarisRadio.Sum(x => x.Iznos) * 0.60);
+
+                // BELI I HARIS
+
+                var beliHarisRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 5);
+
+                hareProcenat += (float)(beliHarisRadio.Sum(x => x.Iznos) * 0.60);
+
+                beliProcenat += (float)(beliHarisRadio.Sum(x => x.Iznos) * 0.15);
+
+                // SAID I BELI
+
+                var saidBeliRadio = dnevniNaloziBezRepro.Where(x => x.RadnikId == 6);
+
+                hareProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.45);
+
+                beliProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.15);
+
+                saidProcenat += (float)(saidBeliRadio.Sum(x => x.Iznos) * 0.15);
+
+
+            }
+
+
+
+
+
+
+
+            lblProcenti.Text = $"Seno procenat : {senoProcenat} KM\r\n" +
+                               $"Said procenat : {saidProcenat} KM\r\n" +
+                               $"Hare procenat : {hareProcenat} KM\r\n" +
+                               $"Beli procenat : {beliProcenat} KM\r\n";
+
         }
 
         private void frmNalozi_FormClosing(object sender, FormClosingEventArgs e)
@@ -197,9 +369,23 @@ namespace DLWMS.WinApp.Forms
 
         private void btnIzvjestaj_Click(object sender, EventArgs e)
         {
-            var noviIzvjestaj = new frmIzvjestaji(dnevniNalozi,dtpDatumFilter.Value.Date);
+            var noviIzvjestaj = new frmIzvjestaji(dnevniNalozi, dtpDatumFilter.Value.Date);
 
             noviIzvjestaj.ShowDialog();
+        }
+
+        private void btnVulkanizerska_Click(object sender, EventArgs e)
+        {
+            vrsta = 1;
+            UcitajComboBox();
+            UcitajNaloge();
+        }
+
+        private void btnPraonica_Click(object sender, EventArgs e)
+        {
+            vrsta = 2;
+            UcitajComboBox();
+            UcitajNaloge();
         }
     }
 }
