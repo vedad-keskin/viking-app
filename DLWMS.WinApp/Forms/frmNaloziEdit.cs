@@ -1,6 +1,7 @@
 ﻿using DLWMS.Data.Models;
 using DLWMS.Infrastructure;
 using DLWMS.WinApp.Helpers;
+using DLWMS.WinApp.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,8 @@ namespace DLWMS.WinApp.Forms
 
         private void UcitajInfo()
         {
+            pbLogo.Image = Resources.Viking_transparent;
+
             cbFirma.SelectedIndex = cbFirma.Items.Cast<Firma>().ToList()
                  .FindIndex(f => f.Id == odabraniNalog.FirmaId);
 

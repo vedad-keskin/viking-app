@@ -2,6 +2,7 @@
 using DLWMS.Infrastructure;
 using DLWMS.WinApp.Fakture;
 using DLWMS.WinApp.Helpers;
+using DLWMS.WinApp.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,8 @@ namespace DLWMS.WinApp.Forms
 
         private void frmFakturaSelect_Load(object sender, EventArgs e)
         {
+            pbLogo.Image = Resources.Viking_transparent;
+
             cbFirma.DataSource = db.Firme.ToList();
 
             cbFirma.SelectedIndex = 1;

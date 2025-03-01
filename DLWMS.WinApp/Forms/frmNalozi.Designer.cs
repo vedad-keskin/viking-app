@@ -63,8 +63,10 @@
             btnPraonica = new Button();
             lblVrsta = new Label();
             btnFaktura = new Button();
+            pbLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)err).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
             // lblRadnik
@@ -296,7 +298,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnBack.Location = new Point(12, 12);
+            btnBack.Location = new Point(161, 7);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(69, 50);
             btnBack.TabIndex = 8;
@@ -307,7 +309,7 @@
             // btnNext
             // 
             btnNext.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnNext.Location = new Point(553, 12);
+            btnNext.Location = new Point(702, 7);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(69, 50);
             btnNext.TabIndex = 9;
@@ -318,7 +320,7 @@
             // dtpDatumFilter
             // 
             dtpDatumFilter.Font = new Font("Segoe UI", 18F);
-            dtpDatumFilter.Location = new Point(87, 14);
+            dtpDatumFilter.Location = new Point(236, 9);
             dtpDatumFilter.Name = "dtpDatumFilter";
             dtpDatumFilter.Size = new Size(460, 47);
             dtpDatumFilter.TabIndex = 8;
@@ -346,7 +348,7 @@
             // 
             // btnVulkanizerska
             // 
-            btnVulkanizerska.Location = new Point(12, 68);
+            btnVulkanizerska.Location = new Point(161, 63);
             btnVulkanizerska.Name = "btnVulkanizerska";
             btnVulkanizerska.Size = new Size(167, 43);
             btnVulkanizerska.TabIndex = 11;
@@ -356,7 +358,7 @@
             // 
             // btnPraonica
             // 
-            btnPraonica.Location = new Point(185, 68);
+            btnPraonica.Location = new Point(334, 63);
             btnPraonica.Name = "btnPraonica";
             btnPraonica.Size = new Size(167, 43);
             btnPraonica.TabIndex = 11;
@@ -368,7 +370,7 @@
             // 
             lblVrsta.AutoSize = true;
             lblVrsta.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblVrsta.Location = new Point(642, 17);
+            lblVrsta.Location = new Point(791, 12);
             lblVrsta.Name = "lblVrsta";
             lblVrsta.Size = new Size(264, 41);
             lblVrsta.TabIndex = 12;
@@ -384,11 +386,21 @@
             btnFaktura.UseVisualStyleBackColor = true;
             btnFaktura.Click += btnFaktura_Click;
             // 
+            // pbLogo
+            // 
+            pbLogo.Location = new Point(2, -9);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(143, 127);
+            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogo.TabIndex = 19;
+            pbLogo.TabStop = false;
+            // 
             // frmNalozi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1190, 704);
+            Controls.Add(pbLogo);
             Controls.Add(btnFaktura);
             Controls.Add(lblVrsta);
             Controls.Add(btnPraonica);
@@ -420,6 +432,7 @@
             Load += frmNalozi_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNalozi).EndInit();
             ((System.ComponentModel.ISupportInitialize)err).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -460,5 +473,6 @@
         private DataGridViewButtonColumn Uredi;
         private DataGridViewButtonColumn Obrisi;
         private Button btnFaktura;
+        private PictureBox pbLogo;
     }
 }

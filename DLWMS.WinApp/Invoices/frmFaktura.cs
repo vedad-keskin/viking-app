@@ -1,5 +1,6 @@
 ﻿using DLWMS.Data.Models;
 using DLWMS.Infrastructure;
+using DLWMS.WinApp.Invoices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Reporting.WinForms;
 

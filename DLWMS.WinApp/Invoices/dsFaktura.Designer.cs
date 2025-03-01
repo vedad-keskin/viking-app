@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DLWMS.WinApp.Izvjestaji {
+namespace DLWMS.WinApp.Invoices {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace DLWMS.WinApp.Izvjestaji {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsDLWMS")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsFaktura")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsDLWMS : global::System.Data.DataSet {
+    public partial class dsFaktura : global::System.Data.DataSet {
         
-        private dsDnevniIzvjestajDataTable tabledsDnevniIzvjestaj;
+        private dsFakturaDataTable tabledsFaktura;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public dsDLWMS() {
+        public dsFaktura() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DLWMS.WinApp.Izvjestaji {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected dsDLWMS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsFaktura(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DLWMS.WinApp.Izvjestaji {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dsDnevniIzvjestaj"] != null)) {
-                    base.Tables.Add(new dsDnevniIzvjestajDataTable(ds.Tables["dsDnevniIzvjestaj"]));
+                if ((ds.Tables["dsFaktura"] != null)) {
+                    base.Tables.Add(new dsFakturaDataTable(ds.Tables["dsFaktura"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DLWMS.WinApp.Izvjestaji {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dsDnevniIzvjestajDataTable dsDnevniIzvjestaj {
+        public dsFakturaDataTable _dsFaktura {
             get {
-                return this.tabledsDnevniIzvjestaj;
+                return this.tabledsFaktura;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DLWMS.WinApp.Izvjestaji {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsDLWMS cln = ((dsDLWMS)(base.Clone()));
+            dsFaktura cln = ((dsFaktura)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DLWMS.WinApp.Izvjestaji {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dsDnevniIzvjestaj"] != null)) {
-                    base.Tables.Add(new dsDnevniIzvjestajDataTable(ds.Tables["dsDnevniIzvjestaj"]));
+                if ((ds.Tables["dsFaktura"] != null)) {
+                    base.Tables.Add(new dsFakturaDataTable(ds.Tables["dsFaktura"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DLWMS.WinApp.Izvjestaji {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledsDnevniIzvjestaj = ((dsDnevniIzvjestajDataTable)(base.Tables["dsDnevniIzvjestaj"]));
+            this.tabledsFaktura = ((dsFakturaDataTable)(base.Tables["dsFaktura"]));
             if ((initTable == true)) {
-                if ((this.tabledsDnevniIzvjestaj != null)) {
-                    this.tabledsDnevniIzvjestaj.InitVars();
+                if ((this.tabledsFaktura != null)) {
+                    this.tabledsFaktura.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DLWMS.WinApp.Izvjestaji {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsDLWMS";
+            this.DataSetName = "dsFaktura";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsDLWMS.xsd";
+            this.Namespace = "http://tempuri.org/dsFaktura.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledsDnevniIzvjestaj = new dsDnevniIzvjestajDataTable();
-            base.Tables.Add(this.tabledsDnevniIzvjestaj);
+            this.tabledsFaktura = new dsFakturaDataTable();
+            base.Tables.Add(this.tabledsFaktura);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializedsDnevniIzvjestaj() {
+        private bool ShouldSerialize_dsFaktura() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DLWMS.WinApp.Izvjestaji {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsDLWMS ds = new dsDLWMS();
+            dsFaktura ds = new dsFaktura();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,18 +270,16 @@ namespace DLWMS.WinApp.Izvjestaji {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void dsDnevniIzvjestajRowChangeEventHandler(object sender, dsDnevniIzvjestajRowChangeEvent e);
+        public delegate void dsFakturaRowChangeEventHandler(object sender, dsFakturaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dsDnevniIzvjestajDataTable : global::System.Data.TypedTableBase<dsDnevniIzvjestajRow> {
+        public partial class dsFakturaDataTable : global::System.Data.TypedTableBase<dsFakturaRow> {
             
-            private global::System.Data.DataColumn columnRb;
-            
-            private global::System.Data.DataColumn columnRadnik;
+            private global::System.Data.DataColumn columnDatum;
             
             private global::System.Data.DataColumn columnVozilo;
             
@@ -289,16 +287,12 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             private global::System.Data.DataColumn columnKolicina;
             
-            private global::System.Data.DataColumn columnDatum;
-            
             private global::System.Data.DataColumn columnIznos;
-            
-            private global::System.Data.DataColumn columnFirma;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajDataTable() {
-                this.TableName = "dsDnevniIzvjestaj";
+            public dsFakturaDataTable() {
+                this.TableName = "dsFaktura";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +300,7 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dsDnevniIzvjestajDataTable(global::System.Data.DataTable table) {
+            internal dsFakturaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,24 +317,16 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected dsDnevniIzvjestajDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dsFakturaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RbColumn {
+            public global::System.Data.DataColumn DatumColumn {
                 get {
-                    return this.columnRb;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RadnikColumn {
-                get {
-                    return this.columnRadnik;
+                    return this.columnDatum;
                 }
             }
             
@@ -370,25 +356,9 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DatumColumn {
-                get {
-                    return this.columnDatum;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn IznosColumn {
                 get {
                     return this.columnIznos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FirmaColumn {
-                get {
-                    return this.columnFirma;
                 }
             }
             
@@ -403,52 +373,49 @@ namespace DLWMS.WinApp.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRow this[int index] {
+            public dsFakturaRow this[int index] {
                 get {
-                    return ((dsDnevniIzvjestajRow)(this.Rows[index]));
+                    return ((dsFakturaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsDnevniIzvjestajRowChangeEventHandler dsDnevniIzvjestajRowChanging;
+            public event dsFakturaRowChangeEventHandler dsFakturaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsDnevniIzvjestajRowChangeEventHandler dsDnevniIzvjestajRowChanged;
+            public event dsFakturaRowChangeEventHandler dsFakturaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsDnevniIzvjestajRowChangeEventHandler dsDnevniIzvjestajRowDeleting;
+            public event dsFakturaRowChangeEventHandler dsFakturaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dsDnevniIzvjestajRowChangeEventHandler dsDnevniIzvjestajRowDeleted;
+            public event dsFakturaRowChangeEventHandler dsFakturaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AdddsDnevniIzvjestajRow(dsDnevniIzvjestajRow row) {
+            public void AdddsFakturaRow(dsFakturaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRow AdddsDnevniIzvjestajRow(string Rb, string Radnik, string Vozilo, string Usluga, string Kolicina, string Datum, string Iznos, string Firma) {
-                dsDnevniIzvjestajRow rowdsDnevniIzvjestajRow = ((dsDnevniIzvjestajRow)(this.NewRow()));
+            public dsFakturaRow AdddsFakturaRow(string Datum, string Vozilo, string Usluga, string Kolicina, string Iznos) {
+                dsFakturaRow rowdsFakturaRow = ((dsFakturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Rb,
-                        Radnik,
+                        Datum,
                         Vozilo,
                         Usluga,
                         Kolicina,
-                        Datum,
-                        Iznos,
-                        Firma};
-                rowdsDnevniIzvjestajRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdsDnevniIzvjestajRow);
-                return rowdsDnevniIzvjestajRow;
+                        Iznos};
+                rowdsFakturaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdsFakturaRow);
+                return rowdsFakturaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dsDnevniIzvjestajDataTable cln = ((dsDnevniIzvjestajDataTable)(base.Clone()));
+                dsFakturaDataTable cln = ((dsFakturaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,67 +423,60 @@ namespace DLWMS.WinApp.Izvjestaji {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dsDnevniIzvjestajDataTable();
+                return new dsFakturaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnRb = base.Columns["Rb"];
-                this.columnRadnik = base.Columns["Radnik"];
+                this.columnDatum = base.Columns["Datum"];
                 this.columnVozilo = base.Columns["Vozilo"];
                 this.columnUsluga = base.Columns["Usluga"];
                 this.columnKolicina = base.Columns["Kolicina"];
-                this.columnDatum = base.Columns["Datum"];
                 this.columnIznos = base.Columns["Iznos"];
-                this.columnFirma = base.Columns["Firma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnRb = new global::System.Data.DataColumn("Rb", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRb);
-                this.columnRadnik = new global::System.Data.DataColumn("Radnik", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRadnik);
+                this.columnDatum = new global::System.Data.DataColumn("Datum", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDatum);
                 this.columnVozilo = new global::System.Data.DataColumn("Vozilo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVozilo);
                 this.columnUsluga = new global::System.Data.DataColumn("Usluga", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUsluga);
                 this.columnKolicina = new global::System.Data.DataColumn("Kolicina", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKolicina);
-                this.columnDatum = new global::System.Data.DataColumn("Datum", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDatum);
                 this.columnIznos = new global::System.Data.DataColumn("Iznos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIznos);
-                this.columnFirma = new global::System.Data.DataColumn("Firma", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirma);
+                this.ExtendedProperties.Add("Generator_TablePropName", "_dsFaktura");
+                this.ExtendedProperties.Add("Generator_UserTableName", "dsFaktura");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRow NewdsDnevniIzvjestajRow() {
-                return ((dsDnevniIzvjestajRow)(this.NewRow()));
+            public dsFakturaRow NewdsFakturaRow() {
+                return ((dsFakturaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dsDnevniIzvjestajRow(builder);
+                return new dsFakturaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dsDnevniIzvjestajRow);
+                return typeof(dsFakturaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dsDnevniIzvjestajRowChanged != null)) {
-                    this.dsDnevniIzvjestajRowChanged(this, new dsDnevniIzvjestajRowChangeEvent(((dsDnevniIzvjestajRow)(e.Row)), e.Action));
+                if ((this.dsFakturaRowChanged != null)) {
+                    this.dsFakturaRowChanged(this, new dsFakturaRowChangeEvent(((dsFakturaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -524,8 +484,8 @@ namespace DLWMS.WinApp.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dsDnevniIzvjestajRowChanging != null)) {
-                    this.dsDnevniIzvjestajRowChanging(this, new dsDnevniIzvjestajRowChangeEvent(((dsDnevniIzvjestajRow)(e.Row)), e.Action));
+                if ((this.dsFakturaRowChanging != null)) {
+                    this.dsFakturaRowChanging(this, new dsFakturaRowChangeEvent(((dsFakturaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -533,8 +493,8 @@ namespace DLWMS.WinApp.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dsDnevniIzvjestajRowDeleted != null)) {
-                    this.dsDnevniIzvjestajRowDeleted(this, new dsDnevniIzvjestajRowChangeEvent(((dsDnevniIzvjestajRow)(e.Row)), e.Action));
+                if ((this.dsFakturaRowDeleted != null)) {
+                    this.dsFakturaRowDeleted(this, new dsFakturaRowChangeEvent(((dsFakturaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -542,14 +502,14 @@ namespace DLWMS.WinApp.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dsDnevniIzvjestajRowDeleting != null)) {
-                    this.dsDnevniIzvjestajRowDeleting(this, new dsDnevniIzvjestajRowChangeEvent(((dsDnevniIzvjestajRow)(e.Row)), e.Action));
+                if ((this.dsFakturaRowDeleting != null)) {
+                    this.dsFakturaRowDeleting(this, new dsFakturaRowChangeEvent(((dsFakturaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovedsDnevniIzvjestajRow(dsDnevniIzvjestajRow row) {
+            public void RemovedsFakturaRow(dsFakturaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -558,7 +518,7 @@ namespace DLWMS.WinApp.Izvjestaji {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsDLWMS ds = new dsDLWMS();
+                dsFaktura ds = new dsFaktura();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -576,7 +536,7 @@ namespace DLWMS.WinApp.Izvjestaji {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dsDnevniIzvjestajDataTable";
+                attribute2.FixedValue = "dsFakturaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -620,46 +580,30 @@ namespace DLWMS.WinApp.Izvjestaji {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dsDnevniIzvjestajRow : global::System.Data.DataRow {
+        public partial class dsFakturaRow : global::System.Data.DataRow {
             
-            private dsDnevniIzvjestajDataTable tabledsDnevniIzvjestaj;
+            private dsFakturaDataTable tabledsFaktura;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dsDnevniIzvjestajRow(global::System.Data.DataRowBuilder rb) : 
+            internal dsFakturaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledsDnevniIzvjestaj = ((dsDnevniIzvjestajDataTable)(this.Table));
+                this.tabledsFaktura = ((dsFakturaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Rb {
+            public string Datum {
                 get {
                     try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.RbColumn]));
+                        return ((string)(this[this.tabledsFaktura.DatumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Rb\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Datum\' in table \'dsFaktura\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsDnevniIzvjestaj.RbColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Radnik {
-                get {
-                    try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.RadnikColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Radnik\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledsDnevniIzvjestaj.RadnikColumn] = value;
+                    this[this.tabledsFaktura.DatumColumn] = value;
                 }
             }
             
@@ -668,14 +612,14 @@ namespace DLWMS.WinApp.Izvjestaji {
             public string Vozilo {
                 get {
                     try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.VoziloColumn]));
+                        return ((string)(this[this.tabledsFaktura.VoziloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Vozilo\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Vozilo\' in table \'dsFaktura\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsDnevniIzvjestaj.VoziloColumn] = value;
+                    this[this.tabledsFaktura.VoziloColumn] = value;
                 }
             }
             
@@ -684,14 +628,14 @@ namespace DLWMS.WinApp.Izvjestaji {
             public string Usluga {
                 get {
                     try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.UslugaColumn]));
+                        return ((string)(this[this.tabledsFaktura.UslugaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Usluga\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Usluga\' in table \'dsFaktura\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsDnevniIzvjestaj.UslugaColumn] = value;
+                    this[this.tabledsFaktura.UslugaColumn] = value;
                 }
             }
             
@@ -700,30 +644,14 @@ namespace DLWMS.WinApp.Izvjestaji {
             public string Kolicina {
                 get {
                     try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.KolicinaColumn]));
+                        return ((string)(this[this.tabledsFaktura.KolicinaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Kolicina\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Kolicina\' in table \'dsFaktura\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsDnevniIzvjestaj.KolicinaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Datum {
-                get {
-                    try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.DatumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Datum\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledsDnevniIzvjestaj.DatumColumn] = value;
+                    this[this.tabledsFaktura.KolicinaColumn] = value;
                 }
             }
             
@@ -732,127 +660,75 @@ namespace DLWMS.WinApp.Izvjestaji {
             public string Iznos {
                 get {
                     try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.IznosColumn]));
+                        return ((string)(this[this.tabledsFaktura.IznosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Iznos\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Iznos\' in table \'dsFaktura\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledsDnevniIzvjestaj.IznosColumn] = value;
+                    this[this.tabledsFaktura.IznosColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Firma {
-                get {
-                    try {
-                        return ((string)(this[this.tabledsDnevniIzvjestaj.FirmaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Firma\' in table \'dsDnevniIzvjestaj\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledsDnevniIzvjestaj.FirmaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRbNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.RbColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRbNull() {
-                this[this.tabledsDnevniIzvjestaj.RbColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRadnikNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.RadnikColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRadnikNull() {
-                this[this.tabledsDnevniIzvjestaj.RadnikColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsVoziloNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.VoziloColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetVoziloNull() {
-                this[this.tabledsDnevniIzvjestaj.VoziloColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsUslugaNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.UslugaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetUslugaNull() {
-                this[this.tabledsDnevniIzvjestaj.UslugaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsKolicinaNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.KolicinaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetKolicinaNull() {
-                this[this.tabledsDnevniIzvjestaj.KolicinaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsDatumNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.DatumColumn);
+                return this.IsNull(this.tabledsFaktura.DatumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDatumNull() {
-                this[this.tabledsDnevniIzvjestaj.DatumColumn] = global::System.Convert.DBNull;
+                this[this.tabledsFaktura.DatumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsVoziloNull() {
+                return this.IsNull(this.tabledsFaktura.VoziloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetVoziloNull() {
+                this[this.tabledsFaktura.VoziloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUslugaNull() {
+                return this.IsNull(this.tabledsFaktura.UslugaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUslugaNull() {
+                this[this.tabledsFaktura.UslugaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsKolicinaNull() {
+                return this.IsNull(this.tabledsFaktura.KolicinaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetKolicinaNull() {
+                this[this.tabledsFaktura.KolicinaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsIznosNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.IznosColumn);
+                return this.IsNull(this.tabledsFaktura.IznosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIznosNull() {
-                this[this.tabledsDnevniIzvjestaj.IznosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFirmaNull() {
-                return this.IsNull(this.tabledsDnevniIzvjestaj.FirmaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFirmaNull() {
-                this[this.tabledsDnevniIzvjestaj.FirmaColumn] = global::System.Convert.DBNull;
+                this[this.tabledsFaktura.IznosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -860,22 +736,22 @@ namespace DLWMS.WinApp.Izvjestaji {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class dsDnevniIzvjestajRowChangeEvent : global::System.EventArgs {
+        public class dsFakturaRowChangeEvent : global::System.EventArgs {
             
-            private dsDnevniIzvjestajRow eventRow;
+            private dsFakturaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRowChangeEvent(dsDnevniIzvjestajRow row, global::System.Data.DataRowAction action) {
+            public dsFakturaRowChangeEvent(dsFakturaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dsDnevniIzvjestajRow Row {
+            public dsFakturaRow Row {
                 get {
                     return this.eventRow;
                 }

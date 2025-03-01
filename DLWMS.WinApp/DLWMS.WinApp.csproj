@@ -9,15 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fakture\rptFaktura.rdlc" />
-    <None Remove="Izvjestaji\rptDnevniIzvjestaj.rdlc" />
+    <None Remove="Invoices\rptFaktura.rdlc" />
+    <None Remove="DailyReports\rptDnevniIzvjestaj.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Fakture\rptFaktura.rdlc">
+    <EmbeddedResource Include="Invoices\rptFaktura.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Izvjestaji\rptDnevniIzvjestaj.rdlc">
+    <EmbeddedResource Include="DailyReports\rptDnevniIzvjestaj.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -32,15 +32,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Fakture\dsFaktura.Designer.cs">
+    <Compile Update="Invoices\dsFaktura.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>dsFaktura.xsd</DependentUpon>
     </Compile>
-    <Compile Update="Fakture\frmFaktura.cs">
+    <Compile Update="Invoices\frmFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Izvjestaji\dsDLWMS.Designer.cs">
+    <Compile Update="DailyReports\dsDLWMS.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>dsDLWMS.xsd</DependentUpon>
@@ -72,11 +72,11 @@
     <None Update="DLWMS.db">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="Fakture\dsFaktura.xsd">
+    <None Update="Invoices\dsFaktura.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsFaktura.Designer.cs</LastGenOutput>
     </None>
-    <None Update="Izvjestaji\dsDLWMS.xsd">
+    <None Update="DailyReports\dsDLWMS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsDLWMS.Designer.cs</LastGenOutput>
     </None>

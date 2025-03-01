@@ -2,6 +2,7 @@
 using DLWMS.Infrastructure;
 using DLWMS.WinApp.Helpers;
 using DLWMS.WinApp.Izvjestaji;
+using DLWMS.WinApp.Properties;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,8 @@ namespace DLWMS.WinApp.Forms
 
         private void UcitajComboBox()
         {
+            pbLogo.Image = Resources.Viking_transparent;
+
             cbUsluga.DataSource = db.Usluge.Where(x => x.VrstaId == vrsta).ToList();
             cbVozilo.DataSource = db.Vozila.ToList();
             cbFirma.DataSource = db.Firme.ToList();

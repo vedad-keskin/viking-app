@@ -25,12 +25,13 @@ namespace DLWMS.WinApp.Forms
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            UcitajLogo();
+            UcitajInfo();
         }
 
-        private void UcitajLogo()
+        private void UcitajInfo()
         {
-            pbLogo.Image = Resources.logo_black;
+            pbLogo.Image = Resources.Viking_transparent;
+            lblVerzija.Text = "Viking V1.1.0";
         }
 
         private async void btnPrijava_Click(object sender, EventArgs e)
