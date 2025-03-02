@@ -15,10 +15,10 @@ namespace DLWMS.WinApp
             ApplicationConfiguration.Initialize();
 
             // Brzo testiranje
-            //var startnaForma = new frmNalozi(1);
+            var startnaForma = new frmNalozi(1);
 
             // Produkcijski
-            var startnaForma = new frmLogin();
+            //var startnaForma = new frmLogin();
 
             Application.Run(startnaForma);
         }
